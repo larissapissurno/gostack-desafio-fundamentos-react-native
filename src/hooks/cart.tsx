@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React, {
   createContext,
   useState,
@@ -88,7 +89,7 @@ const CartProvider: React.FC = ({ children }) => {
         logCart(`PRODUTO ${productsCopy[productIndex].id} INCREMENTADO`);
       }
     },
-    [products],
+    [logCart, products],
   );
 
   const decrement = useCallback(
